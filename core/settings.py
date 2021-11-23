@@ -27,7 +27,11 @@ environ.Env.read_env()
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
+if os.environ.get("DEBUG") == True:
+    DEBUG = True
+else:
+    DEBUG = False
+
 
 ALLOWED_HOSTS = ['weirdtext-api-dawidwk.herokuapp.com', 'localhost']
 
