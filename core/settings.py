@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 if os.environ.get("DEBUG") == True:
     DEBUG = True
 else:
-    DEBUG = True
+    DEBUG = False
 
 
 ALLOWED_HOSTS = ['weirdtext-api-dawidwk.herokuapp.com', 'localhost']
