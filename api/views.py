@@ -7,18 +7,7 @@ import decoder
 
 
 class Encode(APIView):
-    """
-    View to list all users in the system.
-
-    * Requires token authentication.
-    * Only admin users are able to access this view.
-    """
-
     def get(self, request, format=None):
-        """
-        Return a list of all users.
-        """
-
         if request.GET.get('sentence'):
             sentence = request.GET.get('sentence')
 
@@ -34,15 +23,7 @@ class Encode(APIView):
 
 
 class Decode(APIView):
-    """
-    View to list decode the system.
-    """
-
     def get(self, request, format=None):
-        """
-        Return a list of all users.
-        """
-
         if request.GET.get('encoded_sentence') and request.GET.get('orginal_words'):
             sentence = request.GET.get('sentence')
 
