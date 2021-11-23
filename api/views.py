@@ -25,11 +25,11 @@ class Encode(APIView):
 class Decode(APIView):
     def get(self, request, format=None):
         if request.GET.get('encoded_sentence') and request.GET.get('orginal_words'):
-            sentence = request.GET.get('sentence')
-
-            decoded_sentence = decoder.decode_sentence(sentence)
+            sentence = request.GET.get('encoded_sentence')
+            orginal_words = request.GET.get('orginal_words')
+            decoded_sentence = decoder.decode_sentence(sentence, orginal_words)
             response_obj = {
-                "decoded_sentence": decoded_sentence[0],
+                "decoded_sentence": decoded_sentence,
             }
             return Response(response_obj)
         response_obj = {
