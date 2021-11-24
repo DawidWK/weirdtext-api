@@ -139,4 +139,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://nostalgic-minsky-bfda8e.netlify.app'
 ]
